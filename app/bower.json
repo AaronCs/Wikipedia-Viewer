@@ -1,0 +1,21 @@
+{
+  "name": "app",
+  "authors": [
+    "aaroncs <aaronsy2007@yahoo.com>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "jquery": "^2.2.3",
+    "jquery-ui": "jqueryui#^1.11.4"
+  }
+}
