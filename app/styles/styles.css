@@ -1,0 +1,39 @@
+body {
+  background-color: #F6D25B; }
+
+::-webkit-input-placeholder {
+  color: #5B7FF6;
+  font-family: "Raleway"; }
+
+header {
+  font-size: 50px;
+  font-family: "Lora";
+  text-align: center;
+  margin-top: 10rem; }
+  header h1 {
+    font-family: "Raleway"; }
+
+.search-box {
+  border: 2px solid #5B7FF6;
+  border-radius: 10px;
+  margin: 0 auto;
+  display: inline-block;
+  position: absolute;
+  left: 50%;
+  padding-right: 10px;
+  transform: translateX(-50%); }
+
+.search {
+  border-radius: 10px;
+  background-color: #F6D25B;
+  border: 0;
+  height: 2em;
+  padding: 1em;
+  margin-right: 1em; }
+  .search:focus {
+    outline: none; }
+
+div i {
+  color: #5B7FF6; }
+  div i:hover {
+    color: #567af1; }

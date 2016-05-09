@@ -1,0 +1,58 @@
+@mixin font-family($font) {
+	font-family: $font;
+}
+
+$bgcolor1: #F6D25B;
+$bgcolor2: #5B7FF6;
+$Lora: 'Lora';
+$Raleway: 'Raleway';
+
+body {
+	background-color: $bgcolor1;
+}
+::-webkit-input-placeholder {
+	color: $bgcolor2;
+	@include font-family($Raleway);
+}
+
+header {
+	// background-color: white;
+	font-size: 50px;
+	@include font-family($Lora);
+	text-align: center;
+	margin-top: 10rem;
+	h1 {
+		@include font-family($Raleway);
+	}
+}
+
+.search-box {
+	border: 2px solid $bgcolor2;
+	border-radius: 10px;
+	margin: 0 auto;
+	display: inline-block;
+	position: absolute;
+	left: 50%;
+	padding-right: 10px;
+	transform: translateX(-50%);
+}
+
+.search {
+	border-radius: 10px;
+	background-color: $bgcolor1;
+	border: 0;
+	height: 2em;
+	padding: 1em;
+	margin-right: 1em;
+	&:focus {
+		outline: none;
+	}
+}
+
+div i {
+	color: $bgcolor2;
+
+	&:hover {
+		color: ($bgcolor2 - 5);
+	}
+}

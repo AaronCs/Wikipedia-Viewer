@@ -2,11 +2,21 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Wikipedia-Viewer</title>
+	<link href='https://fonts.googleapis.com/css?family=Lora|Raleway' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.2/css/font-awesome.min.css">
 	<link rel="stylesheet" href="styles/styles.css">
 	<script src="bower_components/jquery-ui/jquery-ui.js" type="text/javascript" async></script>
 	<script src="bower_components/jquery/dist/jquery.js" type="text/javascript" charset="utf-8" async></script>
 </head>
 <body>
-	
+	<header>
+		<h1>Wikipedia Article Viewer</h1>
+	</header>
+
+	<div class="search-box">
+		<input class= "search" placeholder="Search..." onfocus="this.placeholder=''" onblur="this.placeholder='Search...'">
+		<i class="fa fa-search fa-lg"></i>
+		</input>
+	</div>
 </body>
 </html>

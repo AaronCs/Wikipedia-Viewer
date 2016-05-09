@@ -1,0 +1,17 @@
+{
+  "name": "wikipedia-viewer",
+  "version": "1.0.0",
+  "description": "This is my Wikipedia Viewer for FreeCodeCamp!",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.12.5",
+    "gulp": "^3.9.1",
+    "gulp-sass": "^2.3.1",
+    "run-sequence": "^1.1.5"
+  }
+}
