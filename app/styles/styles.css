@@ -2,7 +2,7 @@ body {
   background-color: #F6D25B; }
 
 ::-webkit-input-placeholder {
-  color: #5B7FF6;
+  color: #000;
   font-family: "Raleway"; }
 
 header {
@@ -14,7 +14,7 @@ header {
     font-family: "Raleway"; }
 
 .search-box {
-  border: 2px solid #5B7FF6;
+  border: 2px solid #000;
   border-radius: 10px;
   margin: 0 auto;
   display: inline-block;
@@ -34,6 +34,10 @@ header {
     outline: none; }
 
 div i {
-  color: #5B7FF6; }
+  color: #000; }
   div i:hover {
-    color: #567af1; }
+    color: #000;
+    cursor: pointer; }
+
+.big-search-button {
+  text-align: center; }

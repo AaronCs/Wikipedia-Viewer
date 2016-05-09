@@ -3,13 +3,15 @@
 }
 
 $bgcolor1: #F6D25B;
-$bgcolor2: #5B7FF6;
+$bgcolor2: #000; // #5B7FF6;
+$hovercolor: #5B7FF6;
 $Lora: 'Lora';
 $Raleway: 'Raleway';
 
 body {
 	background-color: $bgcolor1;
 }
+
 ::-webkit-input-placeholder {
 	color: $bgcolor2;
 	@include font-family($Raleway);
@@ -53,6 +55,11 @@ div i {
 	color: $bgcolor2;
 
 	&:hover {
-		color: ($bgcolor2 - 5);
+		color: (#000);
+		cursor: pointer;
 	}
+}
+
+.big-search-button {
+	text-align: center;
 }
