@@ -4,9 +4,11 @@
 
 $bgcolor1: #F6D25B;
 $bgcolor2: #000; // #5B7FF6;
+$blurColor: #5B7FF6;
 $hovercolor: #5B7FF6;
 $Lora: 'Lora';
 $Raleway: 'Raleway';
+
 
 body {
 	background-color: $bgcolor1;
@@ -62,4 +64,16 @@ div i {
 
 .big-search-button {
 	text-align: center;
+}
+
+.search-button {
+	padding: 5px 0 0 0;
+}
+
+.random {
+	@include font-family($Raleway);
+	background-color: #000;
+	border-radius: 10px;
+	color: white;
+	font-size: 24px;
 }

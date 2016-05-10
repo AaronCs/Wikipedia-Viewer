@@ -1,22 +1,17 @@
 $(function(){
-	$('.search-box').hide();
-	// $('.big-search-button').hide();
-
-	$('.big-search-button').on('click', function(){
-		$('.big-search-button').slideToggle(500, function(){
-			$('.search-box').slideToggle(600);
-		});
-	});
-
-	$('body').on('click', function(evt){
-		console.log(evt.target.class);
-		if (evt.target.class == ".search-box"){
-			return;
+	// On the fence about this
+	// 'This' as in the switching of searchbox icons.
+	$(".search").on('focus', function(){
+		if (!$(".search-button").hasClass('fa-times')){
+			$(".search-button").toggleClass('fa-times');
 		}
-		else {
-			$('.search-box').slideToggle(500, function(){
-				$('.big-search-button').slideToggle(600);
-			})
-		};
 	});
+
+	$(".search").blur(function(){
+		if($(".search-button").hasClass('fa-times')){
+			$(".search-button").toggleClass('fa-times');
+		}
+	});
+
+	// Include searchbox fa-times click --> reset searchbox
 });

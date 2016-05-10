@@ -41,3 +41,13 @@ div i {
 
 .big-search-button {
   text-align: center; }
+
+.search-button {
+  padding: 5px 0 0 0; }
+
+.random {
+  font-family: "Raleway";
+  background-color: #000;
+  border-radius: 10px;
+  color: white;
+  font-size: 24px; }
