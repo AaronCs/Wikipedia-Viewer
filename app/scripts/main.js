@@ -5,11 +5,15 @@ var searchBar = {
 	},
 	cacheDOM: function() {
 		this.$body = $('body');
-		this.$searchBox = this.$body.find('.searchbox');
+		this.$searchBox = this.$body.find('.search-box'); // tfw forgot hyphen
 		this.$searchButton1 = this.$body.find('.search-button');
 		this.$searchButton2 = this.$body.find('.search-button2');
 		this.$search = this.$body.find('.search');
 		this.$random = this.$body.find('.random');
+
+		// Are these two variables really necessary?
+		this.logicSearchFocus = this.$search.is(":focus");
+		this.logicButton2Class = this.$searchButton2.hasClass('fa-times');
 	},
 	bindEvents: function() {
 		this.searchButtonXToggle();
@@ -26,7 +30,7 @@ var searchBar = {
 			}
 	},
 	searchBlur: function() {
-		if (this.$searchButton2.hasClass('fa-times') && this.$search.is(":focus")){
+		if (this.logicButton2Class && !this.logicSearchFocus && !this.$search.val().length){
 			this.$searchButton2.toggleClass('fa-times');
 		}
 	},
