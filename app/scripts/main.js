@@ -26,8 +26,7 @@ var searchBar = {
 			}
 	},
 	searchBlur: function() {
-		console.log(!this.$searchButton2.hasClass('fa-times'));
-		if (this.$searchButton2.hasClass('fa-times')){ // Something wrong with this.
+		if (this.$searchButton2.hasClass('fa-times') && this.$search.is(":focus")){
 			this.$searchButton2.toggleClass('fa-times');
 		}
 	},
