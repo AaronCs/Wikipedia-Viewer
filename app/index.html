@@ -1,29 +1,39 @@
+<!DOCTYPE html>
 <html>
 <head>
 	<meta charset="UTF-8">
 	<title>Wikipedia-Viewer</title>
-	<link href='https://fonts.googleapis.com/css?family=Lora|Raleway' rel='stylesheet' type='text/css'>
+
+	<link href="https://fonts.googleapis.com/css?family=Lora|Raleway" rel="stylesheet" type="text/css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.2/css/font-awesome.min.css">
 	<link rel="stylesheet" href="styles/styles.css">
 
-	<script src="bower_components/jquery/dist/jquery.js" type="text/javascript" charset="utf-8" async></script>
-	<script src="bower_components/jquery-ui/jquery-ui.js" type="text/javascript" async></script>
-	<script src="/scripts/main.js"></script>
 </head>
 <body>
 	<header>
 		<h1>Wikipedia Article Viewer</h1>
 	</header>
 
+	<div class="random-container">
+		<div class="random">
+				Random Article
+		</div>
+	</div>
+
+	<div></div>
+
 	<div class="search-box close">
-		<i class="fa fa-search fa-lg search-button"></i>		
+		<i class="fa fa-search fa-lg search-button"></i>
+
 		<input class= "search" placeholder="Search..." onfocus="this.placeholder=''" onblur="this.placeholder='Search...'">
-		<i class="fa fa-times fa-lg search-button2"></i>
+			<i class="fa fa-times fa-lg search-button2"></i>
 		</input>
 	</div>
 
-	<!-- <div class="random">
-		Random Article
-	</div> -->
+	<script src="bower_components/jquery/dist/jquery.js" type="text/javascript" charset="utf-8" async defer></script>
+	<script src="bower_components/jquery-ui/jquery-ui.js" type="text/javascript" async defer></script>
+	<script src="scripts/main.js" async defer></script>
+
+
 </body>
 </html>

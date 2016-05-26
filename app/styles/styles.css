@@ -48,6 +48,15 @@ div i {
 .random {
   font-family: "Raleway";
   background-color: #000;
-  border-radius: 10px;
+  border-radius: 5px;
   color: white;
-  font-size: 24px; }
+  font-size: 20px;
+  padding: 1em;
+  display: inline-block; }
+  .random:hover {
+    cursor: pointer;
+    background-color: #222; }
+
+.random-container {
+  text-align: center;
+  margin: 1em auto 3em auto; }
