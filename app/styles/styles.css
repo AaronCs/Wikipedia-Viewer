@@ -39,6 +39,10 @@ div i {
     color: #000;
     cursor: pointer; }
 
+#results {
+  background-color: #999;
+  margin: 10em auto; }
+
 .big-search-button {
   text-align: center; }
 

@@ -48,10 +48,19 @@ var searchWikipediaArticle = (function(){
 	var $body = $('body');
 	var $search = $body.find('.search-button');
 	var $searchVal = $body.find('.search');
+	var $ul = $body.find('ul');
+	var template = $body.find('#results-template').html();
 
 	// bind events
 	$search.on('click', search);
 	$body.on('keypress', enterKeyPress);
+
+	render();
+
+	function render() {
+		var rendered = Mustache.render(template, {results: "Results"});
+		$ul.html(rendered);
+	}
 
 	function search() {
 		var query = $searchVal.val();
@@ -65,6 +74,8 @@ var searchWikipediaArticle = (function(){
 
 	function wikipediaSearch() {
 		var query = $searchVal.val();
+		var foundListTitle = [];
+		var foundListContent = [];
 
 		$.ajax({
 			url: "https://en.wikipedia.org/w/api.php",
@@ -80,7 +91,13 @@ var searchWikipediaArticle = (function(){
 				srsearch: query,
 			},
 			success: function(data) {
-				console.log(data.query.search[1].snippet);
+				for(var i = 0; i < data.query.search.length; i++) {
+					foundListTitle.push(data.query.search[i].title);
+					console.log(data.query.search[i].title);
+					foundListContent.push(data.query.search[i].snippet);
+					console.log(data.query.search[i].snippet);
+				}
+				return {foundListTitle, foundListContent};
 			},
 		});
 	}
@@ -179,5 +196,4 @@ var searchWikipediaArticle = (function(){
 // 	});
 // }
 
-// TODO: Wikipedia API Stuff
-// TODO: Wikipedia Random Article
+// TODO: mustache.js for the wikipedia search items.
