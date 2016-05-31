@@ -43,8 +43,53 @@ var search = (function(){
 	}
 })();
 
-var wikipediaAPI = (function(){
+var searchWikipediaArticle = (function(){
+	// cache DOM
+	var $body = $('body');
+	var $search = $body.find('.search-button');
+	var $searchVal = $body.find('.search');
 
+	// bind events
+	$search.on('click', search);
+	$body.on('keypress', enterKeyPress);
+
+	function search() {
+		var query = $searchVal.val();
+		if (query) {
+			wikipediaSearch();
+		}
+		else {
+			console.log("Type something in");
+		}
+	}
+
+	function wikipediaSearch() {
+		var query = $searchVal.val();
+
+		$.ajax({
+			url: "https://en.wikipedia.org/w/api.php",
+			jsonp: "callback",
+			dataType: 'jsonp',
+			data: {
+				action: "query",
+				format: "json",
+				prop: "links",
+				list: "search",
+				srlimit: "9",
+				srinfo: "suggestion",
+				srsearch: query,
+			},
+			success: function(data) {
+				console.log(data.query.search[1].snippet);
+			},
+		});
+	}
+
+	function enterKeyPress(e) {
+		if (e.which == 13) {
+			search();
+		}
+	}
 })();
 
 // modular JS #1
@@ -136,10 +181,3 @@ var wikipediaAPI = (function(){
 
 // TODO: Wikipedia API Stuff
 // TODO: Wikipedia Random Article
-
-function apiRandomArticle() {
-	var url = "https://en.wikipedia.org/wiki/Special:Random&format=JSONP&callback=?";
-	$.getJSON(url, function(data){
-		console.log(data);
-	});
-}
