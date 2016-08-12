@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
 	<meta charset="UTF-8">
 	<title>Wikipedia-Viewer</title>
@@ -9,41 +10,60 @@
 	<link rel="stylesheet" href="styles/styles.css">
 
 </head>
+
 <body>
 	<header>
-		<h1>Wikipedia Article Viewer</h1>
+		<a href="https://en.wikipedia.org">
+			<h1>Wikipedia Article Viewer</h1>
+		</a>
 	</header>
 
 	<div class="random-container">
 		<a href="https://en.wikipedia.org/wiki/Special:Random">
 			<div class="random">
-					Random Article
+				Random Article
 			</div>
 		</a>
 	</div>
 
-	<div></div>
-
+	<div class="search-box-wrapper">
 		<div class="search-box">
 			<i class="fa fa-search fa-lg search-button"></i>
-
-			<input class= "search" placeholder="Search..." onfocus="this.placeholder=''" onblur="this.placeholder='Search...'">
-				<i class="fa fa-times fa-lg search-button2"></i>
+			<input class="search" placeholder="Search..." onfocus="this.placeholder=''" onblur="this.placeholder='Search...'">
+			<i class="fa fa-times fa-lg search-button2"></i>
 			</input>
 		</div>
+	</div>
 
 	<ul id="results">
-		<script id="results-template" type="text/template">
-			Hello
-			{{results}}
+		<script id="results-template" type="text/x-handlebars-template">
+			<div class="resultsContainer">
+				{{#each result}}
+				<div class="showResults">
+					<a href={{url}} target="_blank">
+						<b>{{title}}</b>: <div class="content">{{{content}}}</div>
+					</a>
+				</div>
+				{{/each}}
+			</div>
 		</script>
+
+
 	</ul>
 
+<<<<<<< b4a2d4a43389f120f85128ff5f798ce397cf843c
 	<script src="bower_components/mustache.js/mustache.js" async></script>
 	<script src="bower_components/jquery/dist/jquery.js" type="text/javascript" charset="utf-8" async></script>
 	<script src="bower_components/jquery-ui/jquery-ui.js" type="text/javascript" async></script>
 	<script src="scripts/main.js" async></script>
+=======
+	<script src="bower_components/handlebars/handlebars.min.js"></script>
+	<script src="bower_components/jquery/dist/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="bower_components/jquery-ui/jquery-ui.min.js" type="text/javascript"></script>
+	<script src="scripts/main.js" async defer></script>
+>>>>>>> Finished! First Version
 
 
 </body>
+
 </html>

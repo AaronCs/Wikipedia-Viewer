@@ -10,8 +10,10 @@
   "license": "ISC",
   "devDependencies": {
     "browser-sync": "^2.12.5",
+    "chai": "^3.5.0",
     "gulp": "^3.9.1",
     "gulp-sass": "^2.3.1",
+    "mocha": "^3.0.2",
     "run-sequence": "^1.1.5"
   }
 }

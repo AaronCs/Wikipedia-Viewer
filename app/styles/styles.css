@@ -1,5 +1,6 @@
 body {
-  background-color: #F6D25B; }
+  background-color: #EEE9D7;
+  font-family: "Lora"; }
 
 ::-webkit-input-placeholder {
   color: #000;
@@ -11,21 +12,22 @@ header {
   text-align: center;
   margin-top: 10rem; }
   header h1 {
-    font-family: "Raleway"; }
+    font-family: "Lora"; }
+
+a {
+  text-decoration: none; }
+  a:visited {
+    color: black; }
 
 .search-box {
   border: 2px solid #000;
   border-radius: 10px;
-  margin: 0 auto;
   display: inline-block;
-  position: absolute;
-  left: 50%;
-  padding-right: 10px;
-  transform: translateX(-50%); }
+  padding-right: 10px; }
 
 .search {
   border-radius: 10px;
-  background-color: #F6D25B;
+  background-color: transparent;
   border: 0;
   height: 2em;
   padding: 1em;
@@ -39,9 +41,18 @@ div i {
     color: #000;
     cursor: pointer; }
 
-#results {
-  background-color: #999;
-  margin: 10em auto; }
+.showResults {
+  font-family: "Lora";
+  margin: 3em 2em;
+  padding: 1em; }
+  .showResults:hover {
+    cursor: pointer;
+    text-decoration: underline;
+    font-weight: bolder; }
+  .showResults .content {
+    display: inline; }
+  .showResults * {
+    color: black; }
 
 .big-search-button {
   text-align: center; }
@@ -50,7 +61,7 @@ div i {
   padding: 5px 0 0 5px; }
 
 .random {
-  font-family: "Raleway";
+  font-family: "Lora";
   background-color: #000;
   border-radius: 5px;
   color: white;
@@ -63,4 +74,7 @@ div i {
 
 .random-container {
   text-align: center;
-  margin: 1em auto 3em auto; }
+  margin: 1em auto 3em; }
+
+.search-box-wrapper {
+  text-align: center; }

@@ -2,48 +2,46 @@
 	font-family: $font;
 }
 
-$bgcolor1: #F6D25B;
-$bgcolor2: #000; // #5B7FF6;
-$blurColor: #5B7FF6;
-$hovercolor: #5B7FF6;
+$bgcolor1: #D0CCBC;
+$bgcolor2: #000;
+$bgcolor3: #EEE9D7;
 $Lora: 'Lora';
 $Raleway: 'Raleway';
 
-
 body {
-	background-color: $bgcolor1;
+	background-color: $bgcolor3;
+	@include font-family($Lora);
 }
-
 ::-webkit-input-placeholder {
 	color: $bgcolor2;
 	@include font-family($Raleway);
 }
-
 header {
-	// background-color: white;
 	font-size: 50px;
 	@include font-family($Lora);
 	text-align: center;
 	margin-top: 10rem;
 	h1 {
-		@include font-family($Raleway);
+		@include font-family($Lora);
+	}
+}
+
+a {
+	text-decoration: none;
+	&:visited {
+		color: black;
 	}
 }
 
 .search-box {
 	border: 2px solid $bgcolor2;
 	border-radius: 10px;
-	margin: 0 auto;
 	display: inline-block;
-	position: absolute;
-	left: 50%;
 	padding-right: 10px;
-	transform: translateX(-50%);
 }
-
 .search {
 	border-radius: 10px;
-	background-color: $bgcolor1;
+	background-color: rgba(0, 0, 0, 0);;
 	border: 0;
 	height: 2em;
 	padding: 1em;
@@ -52,45 +50,60 @@ header {
 		outline: none;
 	}
 }
-
 div i {
 	color: $bgcolor2;
-
 	&:hover {
 		color: (#000);
 		cursor: pointer;
 	}
 }
 
-#results {
-	background-color: #999;
-	margin: 10em auto;
+.showResults {
+	@include font-family($Lora);
+	//border: 0.5px solid $bgcolor2;
+	margin: 3em 2em;
+	padding: 1em;
+
+	&:hover {
+		cursor: pointer;
+		text-decoration: underline;
+		font-weight: bolder;
+	}
+
+	.content {
+		display: inline;
+	}
+	* {
+		color: black;
+	}
 }
 
 .big-search-button {
 	text-align: center;
 }
-
 .search-button {
 	padding: 5px 0 0 5px;
 }
-
 .random {
-	@include font-family($Raleway);
+	@include font-family($Lora);
 	background-color: #000;
 	border-radius: 5px;
 	color: white;
 	font-size: 20px;
 	padding: 1em;
 	display: inline-block;
-
 	&:hover {
 		cursor: pointer;
 		background-color: #222;
 	}
 }
-
 .random-container {
 	text-align: center;
-	margin: 1em auto 3em auto;
+	margin: 1em auto 3em;
 }
+.search-box-wrapper {
+	text-align: center;
+}
+
+// TODO: Stylize little boxes for each result
+// TODO: Make the html tags disappear for the wiki content

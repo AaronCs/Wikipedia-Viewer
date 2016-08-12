@@ -16,7 +16,9 @@
   ],
   "devDependencies": {
     "jquery": "^2.2.3",
-    "jquery-ui": "jqueryui#^1.11.4",
-    "mustache.js": "mustache#^2.2.1"
+    "jquery-ui": "jqueryui#^1.11.4"
+  },
+  "dependencies": {
+    "handlebars": "^4.0.5"
   }
 }
